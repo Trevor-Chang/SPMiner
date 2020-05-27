@@ -2,34 +2,38 @@
 using System;
 using System.Collections.Generic;
 
-namespace SPMiner.Models.Entity
+namespace SPMiner.Models
 {
-    public partial class Admin
+    public partial class Task
     {
         /// <summary>
         /// 資料編號
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// 帳號
+        /// 社群上文章的Id
         /// </summary>
-        public string Account { get; set; }
+        public string TaskId { get; set; }
         /// <summary>
-        /// 密碼
+        /// 文章連結
         /// </summary>
-        public string Password { get; set; }
+        public string TaskUrl { get; set; }
         /// <summary>
-        /// 信箱
+        /// 執行次數
         /// </summary>
-        public string Email { get; set; }
+        public int TaskCount { get; set; }
+        /// <summary>
+        /// 售價
+        /// </summary>
+        public decimal TaskPrice { get; set; }
         /// <summary>
         /// 資料建立日期
         /// </summary>
-        public DateTime? CreateDate { get; set; }
+        public DateTime CreateDate { get; set; }
         /// <summary>
         /// 資料建立人員編號
         /// </summary>
-        public int? CreateAdminId { get; set; }
+        public int Creator { get; set; }
         /// <summary>
         /// 資料異動日期
         /// </summary>
@@ -37,7 +41,7 @@ namespace SPMiner.Models.Entity
         /// <summary>
         /// 資料異動人員編號
         /// </summary>
-        public int? EditAdminId { get; set; }
+        public int? Editor { get; set; }
         /// <summary>
         /// 資料狀態
         /// </summary>
